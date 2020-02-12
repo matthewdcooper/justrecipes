@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block head %}
+	<title>Submit a recipe</title>
+{% endblock %}
+
+{% block body %}
+
+<h1>Submit a recipe</h1>
+<form method='post' action='{{ url_for('submit') }}' enctype=multipart/form-data>
+
+	<label for='in_pic'>Add a picture (optional)</label><br><br>
+	<input id='in_pic' type=file name='picture' accept='image/*'>
+
+	<hr>
+
+	<label for='ta_ing'><h2>Ingredients</h2></label>
+	<textarea id='ta_ing' name='ingredients' rows='15' cols='60'></textarea>
+
+	<hr>
+	
+	<label for='ta_met'><h2>Method</h2></label>
+	<textarea id='ta_met' name='method' rows='30' cols='60'></textarea>
+
+	<hr>
+
+	<input type=submit value='Submit'>
+
+</form>
+
+{% endblock %}

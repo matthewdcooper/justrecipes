@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block head %}
+	<title>{{ recipe.name }}</title>
+{% endblock %}
+
+{% block body %}
+<div id='recipe'>
+	<h1>{{ recipe.name }}</h1>
+	<p>{{ recipe.description }}</p>
+	{% for picture in recipe.pictures %}
+		<img src='{{ url_for('static', filename="pictures/" + picture.location) }}' alt='{{ picture.alt }}'> 
+	{% endfor %}
+
+	<hr>
+
+	<h2>Ingredients</h2>
+	<ul>
+		{% for ingredient in recipe.ingredients %}
+			<li>{{ ingredient.quantity }} {{ ingredient.name }}</li>
+		{% endfor %}
+	</ul>
+
+	<hr>
+
+	<h2>Method</h2>
+	<ol>
+		{% for step in recipe.method %}
+			<li>{{ step }}</li>
+		{% endfor %}
+	</ol>
+</div>
+
+{% endblock %}
+
+
+

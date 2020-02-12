@@ -1,0 +1,46 @@
+body {
+	background-color: #eee;
+	font-family: sans-serif;
+	line-height: 1.2em;
+	max-width: 40em;
+	margin: 0 auto 0 auto;
+	padding: 1em;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+ol {
+	margin: 0 0 20em 1em;
+	padding: 0;
+}
+
+li {
+	margin: 0.5em 0 0.5em 1em;
+
+}
+
+hr {
+	margin: 2em 0 2em 0;
+	color: #ddd;
+
+}
+
+img {
+	max-width: 20em;
+	border: solid black 2px;
+	box-shadow: 0.5em 0.5em 1em black;
+
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+
+}
